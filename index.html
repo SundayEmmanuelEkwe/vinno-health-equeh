@@ -3,113 +3,375 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VINNO HEALTH | Medical Equipment in Lagos Island</title>
-<meta name="description" content="VINNO HEALTH, Isale-Eko, Lagos Island. Call or chat with us on WhatsApp for medical equipment prices and availability.">
+<title>VINNO HEALTH | Medical Equipment in Nigeria &amp; West Africa</title>
+<meta name="description" content="VINNO HEALTH, Idumota, Lagos Island. Medical equipment for hospitals and clinics across Nigeria and West Africa. Chat with us on WhatsApp for prices and availability.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 393 325'%3E%3Cpath fill='%230a6ebd' fill-rule='evenodd' d='M145 268 L139 262 L0 7 L1 0 L47 1 L56 4 L143 171 L152 185 L157 182 L199 122 L243 123 L219 164Z M165 120 L154 120 L150 116 L101 23 L95 4 L310 12 L309 17 L286 54 L263 87 L257 90 L221 87 L224 78 L249 41 L246 37 L239 36 L217 38 L176 109Z M184 325 L163 298 L164 288 L342 18 L350 13 L392 14 L393 19 L274 198Z'/%3E%3C/svg%3E">
+<!-- Link preview when you share the site on WhatsApp.
+     After deploying, replace https://YOUR-SITE.vercel.app with your real link. -->
+<meta property="og:title" content="VINNO HEALTH | Medical Equipment in Nigeria &amp; West Africa">
+<meta property="og:description" content="Browse our equipment and chat with us on WhatsApp for prices and availability.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://YOUR-SITE.vercel.app/images/hospital-bed.jpg">
+
 <style>
-:root { --ink:#1d2127; --soft:#5a626c; --gold:#e3b23c; --bg:#f7f5f0; --line:#e6e1d4; --wa:#0f8a5f; }
+:root {
+  --ink:#0f2740; --ink2:#173a5e; --soft:#5b6b7c; --blue:#0a6ebd; --blue-d:#085a9c; --tint:#eaf3fb;
+  --bg:#f5f9fd; --card:#fff; --line:#dbe6f0; --wa:#0f8a5f; --wa-d:#0b6e4c;
+  --hh:76px; --r:16px; --shadow:0 8px 24px rgba(15,39,64,.10);
+}
 * { box-sizing:border-box; }
-body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
-.wrap { max-width:1000px; margin:0 auto; padding:0 18px; }
-.hero { background:var(--ink); color:#fff; text-align:center; padding:56px 0 64px; }
-.logo { font-size:clamp(2.2rem,9vw,3.6rem); font-weight:800; letter-spacing:.1em; margin:0; }
-.logo span { color:var(--gold); }
-.tag { color:#c3c8ce; margin:10px 0 0; font-size:1.05rem; letter-spacing:.04em; }
-.line { width:64px; height:4px; background:var(--gold); border-radius:2px; margin:22px auto 0; }
-h2 { font-size:1.4rem; margin:0 0 16px; text-align:center; }
-.contact { margin-top:-34px; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
-.box { background:#fff; border:1px solid var(--line); border-radius:16px; padding:22px; text-align:center; box-shadow:0 6px 18px rgba(29,33,39,.08); }
-.box small { display:block; color:var(--soft); letter-spacing:.08em; text-transform:uppercase; font-size:.78rem; }
-.box strong { display:block; font-size:1.7rem; margin:4px 0 16px; letter-spacing:.02em; }
-.btns { display:flex; gap:10px; }
-.btn { flex:1; display:block; text-decoration:none; font-weight:700; padding:13px 10px; border-radius:10px; }
-.wa { background:var(--wa); color:#fff; }
-.call { background:var(--gold); color:var(--ink); }
-section { padding:46px 0 0; }
-.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:14px; }
-.item { margin:0; background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden; }
-.item img { display:block; width:100%; height:auto; aspect-ratio:800/419; object-fit:cover; background:#e8e5dc; }
-.item figcaption { padding:10px 12px; font-weight:600; font-size:.95rem; }
-.address { background:var(--ink); color:#fff; border-radius:16px; padding:28px 22px; text-align:center; }
-.address h2 { color:var(--gold); }
-.address p { margin:0 0 18px; font-size:1.1rem; }
-.address .btn { display:inline-block; width:auto; padding:13px 24px; }
-footer { text-align:center; color:var(--soft); font-size:.88rem; padding:30px 0 36px; }
+html { scroll-behavior:smooth; scroll-padding-top:84px; }
+body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; -webkit-text-size-adjust:100%; }
+img { max-width:100%; }
+a { color:inherit; }
+button { font:inherit; cursor:pointer; }
+:focus-visible { outline:3px solid var(--blue); outline-offset:2px; }
+.wrap { max-width:1080px; margin:0 auto; padding:0 18px; }
+
+/* ---------- Header ---------- */
+.top { position:sticky; top:0; z-index:30; background:rgba(255,255,255,.96); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+.top .wrap { display:flex; align-items:center; justify-content:space-between; height:var(--hh); gap:12px; }
+.brand { display:flex; align-items:center; text-decoration:none; }
+/* Logo lockup: mark on top, VINNO and HEALTH underneath, all the same width (size = font-size) */
+.lockup { display:flex; flex-direction:column; align-items:stretch; width:5.2em; font-size:9px; line-height:1; color:var(--ink); }
+.lockup .lk-mark { width:100%; height:auto; display:block; color:var(--blue); margin-bottom:.7em; }
+.lockup b, .lockup small { display:flex; justify-content:space-between; width:100%; }
+.lockup i { font-style:normal; }
+.lockup b { font-size:1.12em; font-weight:800; }
+.lockup small { font-size:.58em; font-weight:700; margin-top:.75em; color:var(--soft); }
+.lockup-foot { font-size:16px; margin:0 auto 16px; color:#fff; }
+.lockup-foot .lk-mark { color:#fff; }
+.lockup-foot small { color:#9fb2c6; }
+.top nav { display:flex; align-items:center; gap:18px; }
+.top nav a { color:var(--soft); text-decoration:none; font-size:.93rem; font-weight:600; }
+.top nav a:hover { color:var(--blue); }
+.top .mini { background:var(--wa); color:#fff !important; padding:8px 14px; border-radius:999px; font-weight:700; }
+@media (max-width:520px) { .top nav a:not(.mini) { display:none; } }
+
+/* ---------- Buttons ---------- */
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; text-decoration:none; font-weight:700; padding:14px 22px; border-radius:12px; border:0; text-align:center; transition:transform .15s, background .15s; }
+.btn:hover { transform:translateY(-1px); }
+.btn-wa { background:var(--wa); color:#fff; }
+.btn-wa:hover { background:var(--wa-d); }
+.btn-blue { background:var(--blue); color:#fff; }
+.btn-blue:hover { background:var(--blue-d); }
+.btn-ghost { background:#fff; color:var(--blue); border:2px solid var(--blue); }
+.btn-ghost:hover { background:var(--tint); }
+.btn.sm { padding:11px 14px; font-size:.93rem; width:100%; }
+.ic { width:20px; height:20px; flex:none; fill:currentColor; }
+
+/* ---------- Hero ---------- */
+.hero { background:linear-gradient(180deg,var(--tint) 0%,var(--bg) 100%); color:var(--ink); padding:40px 0 72px; }
+.hero .wrap { display:grid; gap:30px; align-items:center; }
+@media (min-width:860px) { .hero .wrap { grid-template-columns:1.1fr .9fr; } }
+.eyebrow { display:inline-block; color:var(--blue); background:#fff; border:1px solid var(--line); padding:6px 12px; border-radius:999px; font-weight:700; letter-spacing:.1em; font-size:.76rem; text-transform:uppercase; margin-bottom:14px; }
+.hero h1 { font-size:clamp(1.9rem,6.2vw,3.1rem); line-height:1.12; margin:0 0 16px; letter-spacing:-.01em; text-wrap:balance; }
+.hero h1 em { font-style:normal; color:var(--blue); }
+.hero p { color:var(--soft); font-size:1.08rem; max-width:50ch; margin:0 0 26px; }
+.actions { display:flex; flex-wrap:wrap; gap:12px; }
+@media (max-width:520px) { .hero .actions .btn { flex:1 1 100%; } }
+.hero-photo { position:relative; max-width:560px; width:100%; justify-self:center; border-radius:22px; overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--line); background:#efece4; }
+.hero-photo img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; }
+.hero-photo b { position:absolute; left:14px; bottom:14px; background:rgba(15,39,64,.9); color:#fff; font-size:.85rem; font-weight:600; padding:7px 12px; border-radius:999px; }
+
+/* ---------- Steps ---------- */
+.steps { margin-top:-34px; position:relative; z-index:2; }
+@media (max-width:520px) { .steps { margin-top:-40px; } .steps li { padding:14px 14px 14px 58px; } .steps li::before { left:14px; top:13px; } }
+.steps ol { list-style:none; margin:0; padding:0; display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); counter-reset:s; }
+.steps li { background:var(--card); border:1px solid var(--line); border-radius:var(--r); padding:18px 18px 18px 64px; position:relative; box-shadow:var(--shadow); font-size:.97rem; color:var(--soft); }
+.steps li::before { counter-increment:s; content:counter(s); position:absolute; left:16px; top:16px; width:34px; height:34px; border-radius:50%; background:var(--blue); color:#fff; font-weight:800; display:grid; place-items:center; }
+.steps strong { display:block; color:var(--ink); }
+
+/* ---------- Products ---------- */
+section { padding-top:56px; }
+h2 { font-size:1.6rem; margin:0 0 6px; letter-spacing:-.01em; }
+.sub { color:var(--soft); margin:0 0 20px; }
+.tools { position:sticky; top:var(--hh); z-index:20; background:var(--bg); padding:12px 0 12px; margin-bottom:14px; border-bottom:1px solid var(--line); }
+.search { width:100%; padding:14px 16px; border-radius:12px; border:1px solid var(--line); background:#fff; font-size:1rem; color:var(--ink); }
+.search:focus { outline:3px solid rgba(10,110,189,.25); border-color:var(--blue); }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; }
+@media (max-width:520px) { .grid { grid-template-columns:repeat(2,1fr); gap:12px; } }
+.card { background:var(--card); border:1px solid var(--line); border-radius:var(--r); overflow:hidden; display:flex; flex-direction:column; box-shadow:0 2px 8px rgba(15,39,64,.05); transition:box-shadow .2s, transform .2s; }
+.card:hover { box-shadow:var(--shadow); transform:translateY(-2px); }
+.card .pic { display:block; width:100%; padding:0; border:0; background:#efece4; }
+.card .pic img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; }
+.card .body { padding:12px 12px 14px; display:flex; flex-direction:column; gap:10px; flex:1; justify-content:space-between; }
+.card h3 { margin:0; font-size:1rem; line-height:1.3; }
+.empty { display:none; text-align:center; padding:34px 14px; background:#fff; border:1px dashed var(--line); border-radius:var(--r); }
+.empty.show { display:block; }
+
+/* ---------- Contact ---------- */
+.contact { background:var(--ink); color:#fff; margin-top:60px; padding:52px 0 56px; }
+.contact h2 { color:#fff; }
+.cgrid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); margin-top:22px; }
+.cbox { background:var(--ink2); border:1px solid rgba(255,255,255,.12); border-radius:var(--r); padding:22px; }
+.cbox small { color:#8cc4ee; text-transform:uppercase; letter-spacing:.1em; font-size:.76rem; font-weight:700; }
+.cbox strong { display:block; font-size:1.55rem; margin:4px 0 16px; letter-spacing:.02em; }
+.cbox .row { display:flex; gap:10px; }
+.cbox .row .btn { flex:1; padding:12px 8px; }
+.cbox p { margin:6px 0 16px; color:#d3e0ee; }
+footer { background:#0a1b2e; color:#9fb2c6; text-align:center; font-size:.88rem; padding:26px 0 32px; }
+@media (max-width:640px) { footer { padding-bottom:92px; } }
+
+/* ---------- Floating WhatsApp ---------- */
+.fab { position:fixed; right:16px; bottom:16px; z-index:40; display:flex; flex-direction:column; align-items:flex-end; gap:10px; }
+.fab-main { display:flex; align-items:center; gap:10px; background:var(--wa); color:#fff; border:0; border-radius:999px; padding:15px 20px; font-weight:800; box-shadow:0 10px 28px rgba(15,138,95,.45); }
+.fab-main .ic { width:24px; height:24px; }
+.fab-menu { display:none; flex-direction:column; gap:8px; background:#fff; border:1px solid var(--line); border-radius:var(--r); padding:12px; box-shadow:0 14px 36px rgba(0,0,0,.2); min-width:240px; }
+.fab.open .fab-menu { display:flex; }
+.fab-menu b { font-size:.8rem; color:var(--soft); text-transform:uppercase; letter-spacing:.08em; }
+.fab-menu .row { display:flex; gap:8px; }
+.fab-menu .row a { flex:1; padding:11px 8px; font-size:.92rem; }
+.fab-menu .num { font-weight:800; }
+
+/* ---------- Lightbox ---------- */
+.lb { position:fixed; inset:0; z-index:60; background:rgba(10,27,46,.88); display:none; align-items:center; justify-content:center; padding:16px; }
+.lb.show { display:flex; }
+.lb-box { background:#fff; border-radius:20px; max-width:760px; width:100%; max-height:94vh; overflow:auto; position:relative; }
+.lb-box img { display:block; width:100%; height:auto; background:#efece4; }
+.lb-info { padding:16px 18px 18px; }
+.lb-info h3 { margin:0 0 12px; font-size:1.2rem; }
+.lb-close { position:absolute; top:10px; right:10px; width:40px; height:40px; border-radius:50%; border:0; background:rgba(15,39,64,.85); color:#fff; font-size:1.4rem; line-height:1; }
+
+@media (prefers-reduced-motion:reduce) { * { transition:none !important; scroll-behavior:auto !important; } }
 </style>
 </head>
 <body>
 
-<header class="hero">
-  <h1 class="logo"><span>VINNO</span> HEALTH</h1>
-  <p class="tag">Medical Equipment &middot; Lagos Island</p>
-  <div class="line"></div>
-</header>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#top" aria-label="VINNO HEALTH home"><span class="lockup" role="img" aria-label="VINNO HEALTH"><svg class="lk-mark" viewBox="0 0 393 325" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M145 268 L139 262 L0 7 L1 0 L47 1 L56 4 L143 171 L152 185 L157 182 L199 122 L243 123 L219 164Z M165 120 L154 120 L150 116 L101 23 L95 4 L310 12 L309 17 L286 54 L263 87 L257 90 L221 87 L224 78 L249 41 L246 37 L239 36 L217 38 L176 109Z M184 325 L163 298 L164 288 L342 18 L350 13 L392 14 L393 19 L274 198Z"/></svg><b><i>V</i><i>I</i><i>N</i><i>N</i><i>O</i></b><small><i>H</i><i>E</i><i>A</i><i>L</i><i>T</i><i>H</i></small></span></a>
+  <nav>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+    <a class="mini" href="#" data-wa="1">WhatsApp</a>
+  </nav>
+</div></header>
 
-<main class="wrap">
-  <div class="contact">
-    <div class="box">
-      <small>Call or chat</small>
-      <strong>0704 631 1738</strong>
-      <div class="btns">
-        <a class="btn wa" href="https://wa.me/2347046311738?text=Hello%20VINNO%20HEALTH%2C%20I%20would%20like%20to%20make%20an%20enquiry.">WhatsApp</a>
-        <a class="btn call" href="tel:+2347046311738">Call</a>
-      </div>
-    </div>
-    <div class="box">
-      <small>Call or chat</small>
-      <strong>0813 300 4076</strong>
-      <div class="btns">
-        <a class="btn wa" href="https://wa.me/2348133004076?text=Hello%20VINNO%20HEALTH%2C%20I%20would%20like%20to%20make%20an%20enquiry.">WhatsApp</a>
-        <a class="btn call" href="tel:+2348133004076">Call</a>
-      </div>
+<section class="hero" id="top"><div class="wrap">
+  <div>
+    <span class="eyebrow">Idumota &middot; Lagos Island</span>
+    <h1>Medical equipment for hospitals and clinics across <em>Nigeria &amp; West Africa</em></h1>
+    <p>We supply hospitals, clinics and health workers in Nigeria and neighbouring countries. Browse our equipment, then message us on WhatsApp for prices and availability.</p>
+    <div class="actions">
+      <a class="btn btn-wa" href="#" data-wa="1"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-3.7-.9a12.8 12.8 0 0 1-5.2-4.6c-.4-.5-1.3-1.7-1.3-3.2s.8-2.3 1.1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.6l1 2.3c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7a8 8 0 0 0 3.6 3.2c.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.2.6.4.1.2.1.8-.1 1.5Z"/></svg>Chat on WhatsApp</a>
+      <a class="btn btn-ghost" href="tel:+2347046311738">Call 0704 631 1738</a>
     </div>
   </div>
+  <div class="hero-photo">
+    <img src="images/hospital-bed.jpg" alt="Electric hospital bed" width="800" height="600">
+    <b>Electric Hospital Bed</b>
+  </div>
+</div></section>
 
+<div class="wrap steps">
+  <ol>
+    <li><strong>Browse</strong>Pick the equipment you need below.</li>
+    <li><strong>Ask on WhatsApp</strong>Tap "Ask price" to chat with us.</li>
+    <li><strong>Visit or call</strong>Come to our shop in Idumota or call us.</li>
+  </ol>
+</div>
+
+<main class="wrap" id="products">
   <section>
     <h2>Our Equipment</h2>
-    <div class="grid" id="gallery"></div>
-  </section>
-
-  <section>
-    <div class="address">
-      <h2>Visit Our Shop</h2>
-      <p>2 Onilegbale Street, Beside Oba Palace,<br>Isale-Eko, Lagos Island, Lagos State</p>
-      <a class="btn call" href="https://www.google.com/maps/search/?api=1&query=2%20Onilegbale%20Street%2C%20Isale-Eko%2C%20Lagos%20Island%2C%20Lagos">Get Directions</a>
+    <p class="sub">Tap a photo to see it bigger. Prices are given on WhatsApp.</p>
+    <div class="tools">
+      <input class="search" id="search" type="search" placeholder="Search equipment, e.g. monitor, bed, oxygen" aria-label="Search equipment">
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty">
+      <strong>We could not find that item here.</strong><br>
+      <span style="color:var(--soft)">We may still have it. Ask us on WhatsApp.</span><br><br>
+      <a class="btn btn-wa" href="#" data-wa="1">Ask on WhatsApp</a>
     </div>
   </section>
 </main>
 
-<footer>&copy; 2026 VINNO HEALTH</footer>
+<section class="contact" id="contact"><div class="wrap">
+  <h2>Contact VINNO HEALTH</h2>
+  <p style="color:#c3d3e4;margin:0">Call or chat with us, or visit our shop.</p>
+  <div class="cgrid">
+    <div class="cbox">
+      <small>Call or chat</small>
+      <strong>0704 631 1738</strong>
+      <div class="row">
+        <a class="btn btn-wa" href="#" data-wa="1">WhatsApp</a>
+        <a class="btn btn-blue" href="tel:+2347046311738">Call</a>
+      </div>
+    </div>
+    <div class="cbox">
+      <small>Visit our shop</small>
+      <p>2 Onilegbale Street, Beside Oba Palace,<br>Idumota, Lagos Island, Lagos State</p>
+      <a class="btn btn-blue" style="width:100%" href="https://www.google.com/maps/search/?api=1&query=2%20Onilegbale%20Street%2C%20Idumota%2C%20Lagos%20Island%2C%20Lagos">Get Directions</a>
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  <span class="lockup lockup-foot" role="img" aria-label="VINNO HEALTH"><svg class="lk-mark" viewBox="0 0 393 325" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M145 268 L139 262 L0 7 L1 0 L47 1 L56 4 L143 171 L152 185 L157 182 L199 122 L243 123 L219 164Z M165 120 L154 120 L150 116 L101 23 L95 4 L310 12 L309 17 L286 54 L263 87 L257 90 L221 87 L224 78 L249 41 L246 37 L239 36 L217 38 L176 109Z M184 325 L163 298 L164 288 L342 18 L350 13 L392 14 L393 19 L274 198Z"/></svg><b><i>V</i><i>I</i><i>N</i><i>N</i><i>O</i></b><small><i>H</i><i>E</i><i>A</i><i>L</i><i>T</i><i>H</i></small></span>
+  &copy; 2026 VINNO HEALTH &middot; Idumota, Lagos Island
+</footer>
+
+<!-- Floating WhatsApp button -->
+<div class="fab" id="fab">
+  <div class="fab-menu" id="fabMenu">
+    <b>Chat or call us</b>
+    <div class="row">
+      <a class="btn btn-wa" href="#" data-wa="1">WhatsApp</a>
+      <a class="btn btn-blue" href="tel:+2347046311738">Call</a>
+    </div>
+    <div class="num">0704 631 1738</div>
+  </div>
+  <button class="fab-main" id="fabBtn" aria-expanded="false" aria-controls="fabMenu">
+    <svg class="ic" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-3.7-.9a12.8 12.8 0 0 1-5.2-4.6c-.4-.5-1.3-1.7-1.3-3.2s.8-2.3 1.1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.6l1 2.3c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7a8 8 0 0 0 3.6 3.2c.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.2.6.4.1.2.1.8-.1 1.5Z"/></svg>
+    <span>Chat with us</span>
+  </button>
+</div>
+
+<!-- Photo viewer -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Product photo">
+  <div class="lb-box">
+    <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+    <img id="lbImg" src="" alt="">
+    <div class="lb-info">
+      <h3 id="lbTitle"></h3>
+      <a class="btn btn-wa" id="lbWa" href="#" style="width:100%">Ask price on WhatsApp</a>
+    </div>
+  </div>
+</div>
 
 <script>
-/* =====================================================
-   ADD YOUR IMAGES HERE
-   1. Put the photo inside the "images" folder.
-   2. Add one line below:  ["images/photo-name.jpg", "Name shown under the photo"],
-   3. Keep a comma at the end of every line except the last.
-   ===================================================== */
-var items = [
-  ["images/electric bed.jpg", "Electric Hospital Bed"],
-  ["images/hospital stretcher.jpg", "Patient Stretcher Trolley"],
-  ["images/emergency crash cart.jpg", "Emergency crash cart"],
-  ["images/motorized wheel chair.jpg", "Electric or motorized Wheelchair"],
-  ["images/patient monitor.jpg", "Patient Monitor"],
-  ["images/ultrasound machine.jpg", "Portable Ultrasound Scanner"],
-  ["images/oxygen concentrator.jpg", "Portable Oxygen Concentrator"],
-  ["images/double suction machine.jpg", "Electric Suction Machine"],
-  ["images/hydrolic delivery bed.jpg", " hydrolic Delivery bed"],
-  ["images/delivery bed.jpg", "Delivery Bed"],
-  ["images/baby cut.jpg", "Baby Cot"],
-  ["images/infant warmer.jpg", "Infant Warmer"],
-  ["images/operating light.jpg", "LED Surgical Light"],
-  ["images/dental chair.jpg", "Dental Chair Unit"],
-  ["images/electric delivery bed.jpg", "Electric Delivery Bed"],
-  /* ADD NEW IMAGE LINES ABOVE THIS COMMENT (put a comma after the autoclave line first) */
-];
+/* ======================================================
+   YOUR PHONE NUMBERS (international format, no + and no 0)
+   ====================================================== */
+var NUMBERS = { 1: "2347046311738" };
 
-document.getElementById("gallery").innerHTML = items.map(function (p) {
-  return '<figure class="item"><img src="' + p[0] + '" alt="' + p[1] +
-    '" width="800" height="419" loading="lazy"><figcaption>' + p[1] + '</figcaption></figure>';
+/* ======================================================
+   ADD YOUR PRODUCTS HERE
+   1. Put the photo in the "images" folder.
+   2. Add one line below:
+        { img: "images/photo-name.jpg", name: "Product name" },
+   3. Keep a comma at the end of each line except the last.
+   ====================================================== */
+var PRODUCTS = [
+  { img: "images/hospital-bed.jpg",         name: "Electric Hospital Bed" },
+  { img: "images/mattresses.jpg",           name: "Hospital Mattresses" },
+  { img: "images/stretcher.jpg",            name: "Patient Stretcher Trolley" },
+  { img: "images/150l autoclave.jpg",       name: "150L Autoclave" },
+  { img: "images/spectrophotometer.jpg",    name: "Spectrophotometer" },
+  { img: "images/anasthesia.jpg",           name: "Anasthesia Mask" },
+  { img: "images/crank bed.jpg",            name: "Crank Bed" },
+  { img: "images/bougie.jpg",               name: "Bougie" },
+  { img: "images/ultrasound.jpg",           name: "Laptop Type Ultrasound Machine" },
+  { img: "images/trolley-ultrasound.jpg",   name: "Ultrasound Machine" },
+  { img: "images/defibrillator.jpg",        name: "Philips Defibrillator" },
+  { img: "images/glucometer.jpg",           name: "Blood Glucose Meter (Glucometer)" },
+  { img: "images/slit-lamp.jpg",            name: "Slit Lamp" },
+  { img: "images/microscope.jpg",           name: "CX33 Olympus Microscope" },
+  { img: "images/full kitted.jpg",          name: "Full Kitted First Aid" },
+  { img: "images/fume hood.jpg",            name: "Fume Hood Cupboard" },
+  { img: "images/dental chair.jpg",         name: "Dental Chair" },
+  { img: "images/anaerobic jar.jpg",        name: "Anaerobic jar" },
+  { img: "images/delivery-bed.jpg",         name: "Delivery Bed" },
+  { img: "images/baby-cot.jpg",             name: "Baby Cot" },
+  { img: "images/infant-warmer.jpg",        name: "Infant Warmer" },
+  { img: "images/surgical-light.jpg",       name: "LED Surgical Light" },
+  { img: "images/ultrasound trolley.jpg",   name: "Ultrasound trolley" },
+  { img: "images/autoclave.jpg",            name: "18L Autoclave Sterilizer" },
+  { img: "images/lma.jpg",                  name: "Laryngeal Mask Airway (LMA)"},
+  { img: "images/nasopharyngeal.jpg",       name: "Nasopharyngeal Airway (NPA)"},
+  { img: "images/sharp container.jpg",      name: "Sharp Container"},
+  { img: "images/stetoscope.jpg",           name: "Stethoscope"},
+  { img: "images/suction.jpg",              name: "Suction Machine"},
+  { img: "images/tracheostom.jpeg",         name: "Treacheostomy Tube"},
+  { img: "images/vomiting.jpg",             name: "Vomiting Bag"},
+  { img: "images/ward screen.jpg",          name: "Ward Screen"},
+  { img: "images/wound dress.jpg",          name: "Wound Dressing Pack"},
+  { img: "images/x-ray.png",                name: "X-Ray Machine"},
+  { img: "images/ultrasound printer.jpg",   name: "Ultrasound Printer"},
+  { img: "images/ambu bag.jpg",             name: "Ambu Bag"},
+  /* ADD NEW PRODUCT LINES ABOVE THIS COMMENT (put a comma after the autoclave line first) */
+];
+/* ====================== END OF EDIT AREA ====================== */
+
+var WA_ICON = '<svg class="ic" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-3.7-.9a12.8 12.8 0 0 1-5.2-4.6c-.4-.5-1.3-1.7-1.3-3.2s.8-2.3 1.1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.6l1 2.3c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7a8 8 0 0 0 3.6 3.2c.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.2.6.4.1.2.1.8-.1 1.5Z"/></svg>';
+
+function waLink(num, text) {
+  return "https://wa.me/" + NUMBERS[num] + "?text=" + encodeURIComponent(text);
+}
+function esc(s) {
+  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+function askText(name) {
+  return "Hello VINNO HEALTH, I am interested in the " + name + ". Please send the price and availability.";
+}
+
+/* General WhatsApp buttons (header, hero, contact) */
+document.querySelectorAll("[data-wa]").forEach(function (a) {
+  a.href = waLink(a.getAttribute("data-wa"), "Hello VINNO HEALTH, I would like to make an enquiry.");
+});
+
+/* Product cards */
+var gridEl = document.getElementById("grid");
+gridEl.innerHTML = PRODUCTS.map(function (p, i) {
+  return '<article class="card" data-i="' + i + '">' +
+    '<button class="pic" type="button" data-open="' + i + '" aria-label="View ' + esc(p.name) + '">' +
+    '<img src="' + esc(p.img) + '" alt="' + esc(p.name) + '" width="800" height="600" loading="lazy"></button>' +
+    '<div class="body"><div><h3>' + esc(p.name) + "</h3></div>" +
+    '<a class="btn btn-wa sm" href="' + waLink(1, askText(p.name)) + '">' + WA_ICON + "Ask price</a></div></article>";
 }).join("");
+
+/* Search and filter */
+var searchEl = document.getElementById("search");
+var emptyEl = document.getElementById("empty");
+function applyFilter() {
+  var q = searchEl.value.trim().toLowerCase();
+  var shown = 0;
+  gridEl.querySelectorAll(".card").forEach(function (card) {
+    var p = PRODUCTS[card.getAttribute("data-i")];
+    var ok = !q || p.name.toLowerCase().indexOf(q) !== -1;
+    card.style.display = ok ? "" : "none";
+    if (ok) shown++;
+  });
+  emptyEl.classList.toggle("show", shown === 0);
+}
+searchEl.addEventListener("input", applyFilter);
+
+/* Photo viewer */
+var lb = document.getElementById("lb");
+function openLb(i) {
+  var p = PRODUCTS[i];
+  document.getElementById("lbImg").src = p.img;
+  document.getElementById("lbImg").alt = p.name;
+  document.getElementById("lbTitle").textContent = p.name;
+  document.getElementById("lbWa").href = waLink(1, askText(p.name));
+  lb.classList.add("show");
+  document.body.style.overflow = "hidden";
+}
+function closeLb() {
+  lb.classList.remove("show");
+  document.body.style.overflow = "";
+}
+gridEl.addEventListener("click", function (e) {
+  var b = e.target.closest("[data-open]");
+  if (b) openLb(b.getAttribute("data-open"));
+});
+document.getElementById("lbClose").addEventListener("click", closeLb);
+lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") { closeLb(); closeFab(); }
+});
+
+/* Floating WhatsApp menu */
+var fab = document.getElementById("fab");
+var fabBtn = document.getElementById("fabBtn");
+function closeFab() { fab.classList.remove("open"); fabBtn.setAttribute("aria-expanded", "false"); }
+fabBtn.addEventListener("click", function () {
+  var open = fab.classList.toggle("open");
+  fabBtn.setAttribute("aria-expanded", open ? "true" : "false");
+});
+document.addEventListener("click", function (e) { if (!fab.contains(e.target)) closeFab(); });
 </script>
 </body>
 </html>
